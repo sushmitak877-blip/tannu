@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Chocolate Day 🍫</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #4b2e2e, #2c1a1a);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .page {
+            display: none;
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #ffb6c1;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff69b4;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff1493;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page active">
+        <h1>🍫 Happy Chocolate Day Bbu 🍫</h1>
+        <p>
+            Just like chocolate makes everything better,<br>
+            your presence makes my life sweeter every single day.
+			You are my sweetheart
+        </p>
+        <button onclick="nextPage()">Next ➡️</button>
+    </div>
+
+    <div class="page">
+        <h1>Sweet Like Chocolate 💝</h1>
+        <p>
+            Sweethaert for you bbu,<br>
+            🍫
+Chocolate si mithaas hai teri baaton mein,
+Teri muskaan meri har thakaan mita jaati hai.
+Tannu, tu sirf meri girlfriend nahi,
+Tu meri har khushi, meri har dua ban jaati hai.
+
+🍫❤️
+Jaise chocolate ke bina din adhoora,
+Waise hi tere bina mera dil adhoora.
+I love you so much meri jaan Tannu,
+Tu hai toh meri duniya poori… har pal poori.
+
+🍫💞
+Is Chocolate Day pe bas ek hi baat kehni hai,
+Tannu, tu meri zindagi ki sabse meethi aadat hai.
+I love you so much meri jaan 😘.
+        </p>
+        <button onclick="nextPage()">Next ➡️</button>
+    </div>
+
+    <div class="page">
+        <h1>A Bite of Happiness 🍬</h1>
+        <p>
+            Chocolate speaks the language of love without words.<br>
+            Today, I’m sending you all my love wrapped in sweetness.I love you my jaan sweetheat bbu
+        </p>
+        <button onclick="nextPage()">Next ➡️</button>
+    </div>
+
+    <div class="page">
+        <h1>Forever Sweet 💖</h1>
+        <p>
+            May our bond always stay rich, warm, and sweet —<br>
+            just like the finest chocolate in the world.
+            <br><br>
+            💕 Happy Chocolate Day! 💕
+        </p>
+        <button onclick="restart()">🔁 Start Again</button>
+    </div>
+
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+
+        function nextPage() {
+            pages[currentPage].classList.remove('active');
+            currentPage++;
+            pages[currentPage].classList.add('active');
+        }
+
+        function restart() {
+            pages[currentPage].classList.remove('active');
+            currentPage = 0;
+            pages[currentPage].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
